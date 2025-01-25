@@ -1,0 +1,184 @@
+/* Favorites page */
+
+.favorites {
+    z-index: 1;
+    margin-bottom: -9px;
+}
+
+/* Jumbotron */
+
+.favorites__jumbotron {
+    z-index: -2;
+    position: relative;
+    height: 384px;
+    width: 100%;
+    background-color: #000;
+    background-image: url("../assets/pattern.svg");
+    background-repeat: repeat;
+    h1 {color: #fff;
+        font-family: $mont;
+        font-weight: bold;
+        font-size: 90px;
+        line-height: 90px;
+        padding-top: 155px;
+        padding-left: 154px;
+    } 
+}
+
+/* Graphic */
+
+.favorites__illustration {
+    z-index: -1;
+    position: absolute;
+    top: 164px;
+    right: 157px;
+    width: 452px;
+}
+
+/* Content */
+
+.favorites__content {
+    z-index: 0;
+    background-color: #f7f7f7;
+}
+
+.favorites--container {
+    margin: -8px 154px 0 154px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+/* Favorite beers */
+
+.favorites__beer {
+    width: 800px;
+    flex-basis: 800px;
+    z-index: 1;
+    text-align: left;
+    margin: 86px auto 111px 0;
+}
+
+.favorites__title {
+    font-family: $mont;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 48px;
+    color: #212121;
+    padding-bottom: 24px;
+}
+
+/* Beer card container */
+
+.favorites__list {
+    height: 946px;
+    overflow: auto;
+}
+
+.favorites__list::-webkit-scrollbar { 
+    width: 0 !important
+}
+
+
+/* Media queries */
+
+/* Tablet */
+@media all and (min-width: 760px) and (max-width: 1270px) {
+    .favorites__jumbotron {
+        height: 560px;
+        h1 {
+            position: absolute;
+            top: 153px;
+            left: 0;
+            right: 0;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 60px;
+            line-height: 60px;
+            width: 575px;
+            text-align: center;
+        } 
+    }
+    .favorites__illustration {
+        position: absolute;
+        top: 287px;
+        width: 452px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .favorites--container {
+        margin: -8px 40px 0 40px;
+    }
+    .favorites__beer {
+        flex: 1 75%;
+    }
+    .favorites__list {
+        margin-right: auto;
+    }
+}
+
+/* Mobile */
+@media all and (min-width: 310px) and (max-width: 760px)  {
+    .favorites__jumbotron {
+        height: 316px;
+        width: 100%;
+        text-align: center;
+        h1 {
+            flex: 1;
+            display: inline-block;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 150px 0 0 0;
+        }
+    }
+    .favorites__illustration {
+        display: block;
+        top: 164px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 160px;
+        padding: 36px 0 0 0;
+    }
+    .favorites__join__button {
+        position: absolute;
+        display: block;
+        top: 545px;
+        margin: 0;
+        margin-left: 25vw;
+    }
+    .favorites__cap {
+        display: block;
+        width: 18px;
+        margin-top: -8px;
+        right: 25px;
+    }
+    .favorites--container {
+        margin: 0 15px;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+    }
+    .favorites__beer {
+        flex: 1;
+        margin: 30px 0 0 0;
+    }
+    .favorites__title {
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 48px;
+        text-align: left;
+        padding-top: 14px;
+    }
+    .favorites__list {
+        width: 100vw;
+        height: 176px;
+        overflow: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,343 @@
+/* Join */
+
+.join {
+    z-index: 1;
+    margin-bottom: -9px;
+}
+
+/* Jumbotron */
+
+.join__jumbotron {
+    z-index: -2;
+    position: relative;
+    height: 384px;
+    width: 100%;
+    background-color: #000;
+    background-image: url("../assets/pattern.svg");
+    background-repeat: repeat;
+    h1 {
+        color: #fff;
+        font-family: $mont;
+        font-weight: bold;
+        font-size: 90px;
+        line-height: 90px;
+        padding-top: 155px;
+        padding-left: 154px;
+    } 
+}
+
+.join__illustration {
+    z-index: -1;
+    position: absolute;
+    top: 164px;
+    right: 157px;
+    width: 452px;
+}
+
+/* Content */
+
+.join__content {
+    width: 100%;
+    z-index: -1;
+    background-color: #f7f7f7;
+    text-align: center;
+    h2 {
+        color: #212121;
+        font-family: $mont;
+        font-size: 36px;
+        line-height: 48px;
+        padding-top: 30px;
+        padding-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Form */
+
+.join--form--container {
+    padding-bottom: 83px;
+}
+
+.join__form {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 552px;
+    background-color: #fff;
+    padding: 45px 29px 32px 29px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+    text-align: left;
+    p { 
+        display: block;
+        color: #292929;
+        font-family: $mont;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 24px;
+    }
+    label {
+        display: block;
+        color: #000;
+        font-family: $opns;
+        font-size: 14px;
+        line-height: 19px;
+        padding-left: 30px;    
+    }
+    hr {
+        color: #D8D8D8;
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+    /* Container */
+    .container {
+        display: block;
+        position: relative;
+        padding-bottom: 17px;
+        font-size: 18px;
+        user-select: none;
+        cursor: pointer;
+    }
+    /* Hide the browser's default input */
+    .hide {
+        position: absolute;
+        display: block;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        cursor: pointer;
+    }
+    /* Text input style */
+    .text {
+        display: inline-block;
+        height: 52px;
+        width: 280px;
+        margin-bottom: 24px;
+        border-radius: 4px;
+        background-color: #f7f7f7;
+        box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.32);
+        padding-left: 18px;
+        color: #292929;
+        font-family: $opns;
+        font-size: 14px;
+        line-height: 19px;
+        ::placeholder {
+            color: #292929;
+            font-family: $opns;
+            font-size: 14px;
+            line-height: 19px;
+            padding-top: 17px;
+        }
+    }
+    .text:focus {
+        color: #000;
+        background-color: #fff;
+    }
+    /* Textarea input style */
+    .textarea {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding-left: 18px;
+        padding-top: 18px;
+        height: 155px;
+        width: 494px;
+        border-radius: 4px;
+        background-color: #f7f7f7;
+        box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.32);
+        color: #292929;
+        font-family: $opns;
+        font-size: 14px;
+        line-height: 19px;
+        ::placeholder {
+            color: #292929;
+            font-family: $opns;
+            font-size: 14px;
+            line-height: 19px;
+            padding-top: 0;
+        }
+    }
+    .textarea:focus {
+        color: #000;
+        background-color: #fff;
+    }
+    /* Radio */
+    .radio{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        border: 2px #9FA3A7 solid;
+        border-radius: 50%;
+    }
+    /* Radio style */
+    .container .radio:after {
+        left: 2px;
+        top: 2px;
+        width: 10px;
+        height: 10px;
+        background-color: #FFC80A;
+        border-radius: 50%;
+    }
+    /* Create the radio (hidden when not checked) */
+    .radio:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the radio when checked */
+    .container input:checked ~ .radio:after {
+        display: block;
+    }
+    /* Checkmark */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        border: 2px #9FA3A7 solid;
+    }
+    /* Checkmark style */
+    .container .checkmark:after {
+        left: 6px;
+        bottom: 3px;
+        width: 6px;
+        height: 12px;
+        border: solid #FFC80A;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+    /* Create the checkmark (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    .container input:checked ~ .checkmark:after {
+        display: block;
+    }
+    .bottom--checkbox {
+        margin-bottom: 57px;
+    }
+    /* Submit button */
+    .form__join__button {
+        z-index: 4;
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 235px;
+        margin-left: -118px;
+        margin-bottom: -10px;
+        padding: 24px 60px 24px 60px;
+        color: #292929;
+        font-family: $mont;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2.4px;
+        line-height: 14px;
+        text-decoration: none;
+        background: #FFC80A;
+        border-radius: 49.5px;
+        -moz-border-radius: 49.5px;
+        -webkit-border-radius: 49.5px;
+        cursor: pointer;
+    }
+    .form__join__button:hover {
+        color: #fff;
+        background: #F05638;
+    }
+    .form__join__button:active {
+        padding: 26px 62px 26px 62px;
+    }
+    .form__join__button:focus {
+        outline: none;
+    }
+}
+
+/* Media queries */
+
+/* Tablet */
+@media all and (min-width: 760px) and (max-width: 1270px) {
+    .join__jumbotron {
+        height: 560px;
+        h1 {
+            position: absolute;
+            top: 153px;
+            left: 0;
+            right: 0;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 60px;
+            line-height: 60px;
+            width: 575px;
+            text-align: center;
+        } 
+    }
+    .join__illustration {
+        position: absolute;
+        top: 287px;
+        width: 452px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .join__content {
+        h2 {
+            font-size: 30px;
+            line-height: 48px;
+        }
+    }
+}
+
+/* Mobile */
+@media all and (min-width: 310px) and (max-width: 760px)  {
+    .join__jumbotron {
+        height: 316px;
+        width: 100%;
+        text-align: center;
+        h1 {
+            display: inline-block;
+            font-size: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 150px 0 0 0;
+        }
+    }
+    .join__illustration {
+        display: block;
+        top: 164px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        margin: auto;
+        width: 160px;
+        padding: 36px 0 0 0;
+    }
+    .join__content {
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 32px;
+            padding-top: 30px;
+            padding-bottom: 27px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .join__form {
+        width: 95%;
+        padding: 39px 19px 32px 19px;
+        .text {
+            width: 100%;
+        }
+        .textarea {
+            width: 100%;
+        }
+    }
+}

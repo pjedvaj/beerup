@@ -1,0 +1,301 @@
+/* Modal */
+
+.modal__window {
+    display: block;
+}
+
+/* Modal tinted background */
+.modal__cover {
+    z-index: 6;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(18, 5, 3, 0.88);
+    background-image: url("../assets/pattern.svg");
+    background-repeat: repeat; 
+}
+
+/* Modal window */
+.modal {
+    z-index: 7;
+    position: fixed;
+    margin: 0 auto;
+    width: 746px;
+    height: 606px;
+    left:50%;
+    top:50vh;
+    margin-left:-373px;
+    margin-top:-303px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 48px 0 rgba(0, 0, 0, 0.32);
+}
+
+/* Hide the browser's default input */
+.modal__heart__hide {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+/* Checkmark */
+.modal__heart__checkmark {
+    position: absolute;
+    top: 42px;
+    left: 41px;
+    width: 30px;
+    height: 28px;
+    background-image: url('../assets/heart\ outline.svg');
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* Checkmark style */
+.modal__heart__container .modal__heart__checkmark:after {
+    width: 30px;
+    height: 28px;
+    background-image: url('../assets/heart\ solid.svg');
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* Create the checkmark (hidden when not checked) */
+.modal__heart__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.modal__heart__container input:checked ~ .modal__heart__checkmark:after {
+    display: block;
+}
+
+/* Close icon */
+.modal__close {
+    display: block;
+    float: right;
+    padding: 46px 46px 0 0;
+    cursor: pointer;
+}
+
+/* Container */
+.modal__container {
+    clear: both;
+    position: relative;
+    padding-bottom: 86px;
+}
+
+/* Beer illustration */
+.modal__beer {
+    position: absolute;
+    top: 0;
+    left: 122px;
+    height: auto;
+    width: 100px;
+}
+
+/* Beer information text */
+.modal__info {
+    position: absolute;
+    left: 338px;
+    top: 0;
+    padding-right: 96px;
+    text-align: left;
+}
+
+/* Beer name */
+.modal__name {
+	color: #212121;
+	font-family: $mont;
+	font-size: 36px;
+	font-weight: bold;
+    line-height: 36px;
+    padding-bottom: 33px;
+}
+
+/* Beer IBU */
+.modal__ibu {
+    display: block;
+	color: #9FA3A7;
+	font-family: $opns;
+	font-size: 14px;
+    line-height: 26px;
+}
+
+.ibu__val {
+    color: #3F4750;
+    font-family: $opns;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+    padding-left: 23px;
+}
+
+/* Beer ABV */
+.modal__abv {
+    display: block;
+	color: #9FA3A7;
+	font-family: $opns;
+	font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 37px;
+}
+
+.abv__val {
+    color: #3F4750;
+    font-family: $opns;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 26px;
+    padding-left: 23px;
+}
+
+/* Beer description */
+.modal__desc {
+	color: #9FA3A7;
+	font-family: $opns;
+	font-size: 14px;
+    line-height: 26px;
+    padding-bottom: 22px;
+    max-height: 130px;
+    overflow-y: scroll;
+}
+
+.modal__desc::-webkit-scrollbar {
+    width: 0 !important
+}
+
+/* Add to crate button */
+
+.modal__crate {
+    position: absolute;
+    left: 338px;
+    bottom: -310px;
+	height: 48px;
+	width: 182px;
+	border-radius: 24px;
+    background-color: #FFC80A;
+    color: #292929;
+	font-family: $mont;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+	line-height: 14px;
+	text-align: center;
+    cursor: pointer;
+}
+
+.modal__crate:hover {
+    color: #fff;
+    background: #F05638;
+}
+
+.modal__crate:active {
+	height: 50px;
+	width: 184px;
+}
+
+.modal__crate:focus {
+    outline: none;
+}
+
+/* Media queries */
+
+/* Tablet */
+@media all and (min-width: 760px) and (max-width: 1270px) {
+    .modal {
+        width: 696px;
+        height: 606px;
+        left:50%;
+        top:50vh;
+        margin-top:-303px;
+        margin-left:-348px;
+    }
+    .modal__info {
+        padding-right: 70px;
+    }
+    .modal__crate {
+        left: 310px;
+    }
+}
+
+/* Mobile */
+@media all and (min-width: 310px) and (max-width: 760px)  {
+    .modal {
+        width: 292px;
+        height: 536px;
+        left:50%;
+        top:50vh;
+        margin-left:-146px;
+        margin-top:-268px;
+    }
+    .modal__heart__checkmark {
+        top: 26px;
+        left: 26px;
+        width: 22px;
+        height: 20px;
+    }
+
+    .modal__heart__container .modal__heart__checkmark:after {
+        width: 22px;
+        height: 20px;
+    }
+    .modal__close {
+        padding: 26px 26px 0 0;
+    }
+    .modal__beer {
+        height: auto;
+        width: 70px;
+        left: 40%;
+        margin-top: -90px;
+    }
+    .modal__info {
+        left: 0;
+        top: 220px;
+        text-align: center;
+        padding: 0;
+        p {
+            padding-top: 20px;
+            padding-left: 12px;
+            padding-right: 12px;
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+    .modal__name {
+        font-size: 24px;
+        line-height: 24px;
+        padding-bottom: 6px;
+    }
+    .modal__ibu {
+        display: inline;
+    }
+    .ibu__val {
+        padding-left: 8px;
+    }
+    .modal__abv {
+        display: inline;
+        padding-left: 32px;
+    }
+    .abv__val {
+        padding-left: 8px;
+    }
+    .modal__desc {
+        max-height: 170px;
+        overflow-y: scroll;
+    }
+    .modal__crate {
+        bottom: -432px;
+        left: 55px;
+    }
+}

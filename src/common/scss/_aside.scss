@@ -1,0 +1,146 @@
+/* Crate */
+
+.crate {
+    flex-basis: 264px;
+    width: 264px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-top: 86px;
+    margin-bottom: auto;
+    h2 {
+        flex: 1 100%;
+        font-family: $mont;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 48px;
+        color: #212121;
+        padding-bottom: 20px;
+    }
+    h3 {
+        color: #9FA3A7;
+        font-family: $mont;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 2.8px;
+        line-height: 17px;
+        padding-bottom: 4px;
+    }
+}
+
+/* Crate links */
+
+.crate__links {
+    flex: 1 100%;
+    display: inline;
+	color: #9FA3A7;
+	font-family: $mont;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: 2.8px;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+.crate--active {
+    color: #3F4750;
+	box-sizing: border-box;
+    height: 2px;
+    cursor: pointer;
+}
+
+.crate__one {
+    padding-right: 30px;
+}
+
+.crate__two {
+    padding-right: 30px;
+}
+
+/* Crate graphics */
+
+.crate__container {
+    display: flexbox;
+    flex-direction: row;
+    flex: 1 100%;
+    width: 264px;
+    min-height: 346px;
+    z-index: 1;
+    margin-top: 29px;
+    padding-top: 8px;
+    padding-left: 6px;
+    background-image: url("../assets/crate.svg");
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.crate__bottle {
+    width: 58px;
+    margin-left: 4px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Crate text */
+
+.crate__text {
+    flex: 1 100%;
+    align-self: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+        color: #3F4750;
+        font-family: $opns;
+        font-size: 12px;
+        line-height: 32px;
+    }
+    small {
+        color: #9FA3A7;
+        font-family: $opns;
+        font-size: 12px;
+        line-height: 32px;
+    }
+}
+
+/* Media queries */
+
+/* Tablet */
+@media all and (min-width: 760px) and (max-width: 1270px){
+    .crate {
+        margin: 86px 0 auto 0;
+        flex: 1 25%;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile */
+@media all and (min-width: 310px) and (max-width: 760px)  {
+    .crate {
+        flex: 1 100%;
+        width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 8px;
+        h2 {
+            font-size: 24px;
+            font-weight: normal;
+            line-height: 48px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+    .crate__links {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .crate__graphic {
+        transform: rotate(90deg);
+        margin: 0;
+        padding: 0;
+    }
+    .crate__text {
+        padding-bottom: 12px;
+    }
+}

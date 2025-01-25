@@ -1,0 +1,120 @@
+/* Beer cards */
+
+.card--beer {
+    display: inline-block;
+    position: relative;
+	height: 168px;
+    width: 168px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    padding-top: 10px;
+    padding-left: 12px;
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+}
+
+.card--beer:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Hide the browser's default input */
+.card__heart__hide {
+    position: absolute;
+    display: block;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+
+/* Checkmark */
+.card__heart__checkmark {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-image: url('../assets/heart\ outline.svg');
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* Checkmark style */
+.card__heart__container .card__heart__checkmark:after {
+    width: 11px;
+    height: 11px;
+    background-image: url('../assets/heart\ solid.svg');
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* Create the checkmark (hidden when not checked) */
+.card__heart__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.card__heart__container input:checked ~ .card__heart__checkmark:after {
+    display: block;
+}
+
+.card__img {
+    display: block;
+    position: absolute;
+    bottom: 26px;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.card--beer--right {
+    button {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        width: 80px;
+        color: #292929;
+        font-family: $mont;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 17px;
+        padding: 0 0 8px 0;
+        text-align: left;
+        text-decoration: none;
+        background: none;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+    }
+    button:focus {
+        outline: none;
+    }
+    .card--beer--values {
+        position: absolute;
+        bottom: 34px;
+        right: 20px;
+        width: 80px;
+        h4 {
+            display: inline;
+            color: #9FA3A7;
+            font-family: $opns;
+            font-size: 14px;
+            line-height: 26px;
+        }
+        p {
+            display: block;
+            color: #3F4750;
+            font-family: $opns;
+            font-size: 14px;
+            line-height: 26px;
+            text-align: right;
+            float: right;
+        }
+    }
+}
